@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Billabong";
+    src: local("Billabong"),
+      url("./fonts/Billabong.ttf") format("truetype");
+    font-weight: normal;
+}
+
+*{
+  margin: 0px
+}
