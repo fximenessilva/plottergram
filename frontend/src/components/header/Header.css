@@ -1,0 +1,43 @@
+.header-logo{
+    font-family: "Billabong";
+    font-size: 30px;
+    font-weight: 100;
+    margin-right: 160px;
+}
+
+
+
+.header-wrapper{
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(250,250,250,1);
+    border-bottom: 1 px solid rgba(219,219,219, 1);
+    border-bottom: 1px solid #dbdbdb;
+}
+.header{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.searchBar-wrapper{
+    margin: auto;
+}
+
+.header-searchBar{
+    background-color: #f4f4f443;
+    font-size: 14px;
+    /* background-color: rgba(250,250,250,1); */
+    border-radius: 3px;
+    color: #8E8E8E;
+    outline: none;
+    text-align: center;
+    width: 213px;
+    padding: 7px;
+    height: 14px;
+    border: 1px solid rgba(96, 96, 96, 0.438);
+    font-family: Helvetica, sans-serif;
+}
