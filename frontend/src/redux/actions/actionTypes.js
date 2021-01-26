@@ -1,5 +1,8 @@
 const actionTypes = {
-
+  LOGIN_USER_AUTH0: 'LOGIN_USER_AUTH0',
+  LOGIN_ERROR: 'LOGIN_ERROR',
+  LOGOUT_SUCCESS: 'LOGOUT_SUCCESS',
+  LOGOUT_ERROR: 'LOGOUT_ERROR',
 };
 
 export default actionTypes;
