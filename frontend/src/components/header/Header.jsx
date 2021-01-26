@@ -10,9 +10,7 @@ import './Header.css';
 export default (props) => {
   const [homeSelected, setHomeSelected] = useState(false);
   const [likeSelected, setLikeSelected] = useState(false);
-
-  const [search, setSearch] = useState('Search');
-  const [searchFocus, setSearchFocus] = useState(true);
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <nav className="header-wrapper">
@@ -22,13 +20,20 @@ export default (props) => {
         </div>
         <div className="searchBar-wrapper">
           <input
-            onFocus={() => setSearchFocus(false)}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             type="text"
             className="header-searchBar"
+            placeholder="&#xF002; Search"
+            style={{
+              fontFamily: 'Arial, FontAwesome', fontSize: '13px', fontWeight: '100', outline: 'none !important',
+            }}
+            onBlur={() => setInputValue('')}
           />
-          <p className={searchFocus ? 'header-searchBar-placeholder' : 'header-searchBar-placeholder-focus'}>{search}</p>
-          <span className="material-icons input-search-icon">
-            search
+          <span
+            className="material-icons-sharp close-searchBar-btn"
+          >
+            highlight_off
           </span>
         </div>
         <div className="header-icons-wrapper">
