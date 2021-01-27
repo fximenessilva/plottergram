@@ -15,11 +15,13 @@ const store = configureStore();
 
 ReactDOM.render(
   <Router>
-    <Provider store={store}>
-      <Auth0ProviderWithHistory>
-        <App />
-      </Auth0ProviderWithHistory>
-    </Provider>
+    <React.StrictMode>
+      <Provider store={store}>
+        <Auth0ProviderWithHistory>
+          <App />
+        </Auth0ProviderWithHistory>
+      </Provider>
+    </React.StrictMode>
   </Router>,
   document.getElementById('root'),
 );

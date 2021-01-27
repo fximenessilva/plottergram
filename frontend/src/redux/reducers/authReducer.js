@@ -1,7 +1,7 @@
 /* eslint-disable no-debugger */
 import actionTypes from '../actions/actionTypes';
 
-export default function authReducer(state = {}, action = {}) {
+export default function authReducer(state = {}, action) {
   let newState = null;
   debugger;
   switch (action.type) {
