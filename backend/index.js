@@ -9,6 +9,12 @@ const mongoose = require('mongoose');
 const userModel = require('./src/models/userModel');
 const userRoutes = require('./src/routes/userRoutes')(userModel);
 
+const postModel = require('./src/models/postModel');
+const postRoutes = require('./src/routes/postRoutes')(postModel);
+
+const favModel = require('./src/models/favsModel');
+const favRoutes = require('./src/routes/favRoutes')(favModel);
+
 const app = express();
 app.use(cors());
 
@@ -23,6 +29,8 @@ const DBURL = 'mongodb://localhost/plottergramdb';
 mongoose.connect(DBURL, { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 app.use('/user', userRoutes);
+app.use('/posts', postRoutes);
+app.use('/favs', favRoutes);
 
 app.listen(port, () => {
   debug(`Server is running on port ${chalk.blue(port)}`);
