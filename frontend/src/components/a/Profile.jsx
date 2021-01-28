@@ -6,6 +6,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import sendUserToBack from '../../redux/actions/loginAuth0Action';
 
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+
 function Profile({ dispatch }) {
   const { user } = useAuth0();
 
@@ -15,6 +18,8 @@ function Profile({ dispatch }) {
   }
   return (
     <div>
+      {user ? <LogoutButton /> : <LoginButton />}
+
       {user?.name}
       {user && (
       <button
