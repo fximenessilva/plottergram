@@ -3,6 +3,8 @@ const actionTypes = {
   LOGIN_ERROR: 'LOGIN_ERROR',
   LOGOUT_SUCCESS: 'LOGOUT_SUCCESS',
   LOGOUT_ERROR: 'LOGOUT_ERROR',
+  LOAD_POSTS: 'LOAD_POSTS',
+  LOAD_POSTS_ERROR: 'LOAD_POSTS_ERROR',
 };
 
 export default actionTypes;
