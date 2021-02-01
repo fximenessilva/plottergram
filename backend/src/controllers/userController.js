@@ -19,6 +19,7 @@ function userController(user) {
       const newUser = {
         name: body.user.name,
         email: body.user.email,
+        profilePic: body.user.picture,
       };
 
       const putCallback = (createUserError, createdUser) => (
