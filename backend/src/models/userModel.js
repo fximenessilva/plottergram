@@ -5,6 +5,7 @@ const userDataSchema = new Schema({
   email: { type: String },
   username: { type: String },
   bio: { type: String },
+  profilePic: { type: String },
   posts: [{ type: Schema.Types.ObjectId, ref: 'posts' }],
   favs: [{ type: Schema.Types.ObjectId, ref: 'favs' }],
 
