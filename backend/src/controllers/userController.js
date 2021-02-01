@@ -4,9 +4,9 @@ function userController(user) {
     const { userId } = req.params;
     const getCallback = (errorFindUser, userData) => (
       errorFindUser ? res.send(errorFindUser) : res.send(userData));
-    user.findById(userId)
-      .populate('post', 'favs')
-      .exec(getCallback);
+    user.findById(userId, (getCallback));
+    // .populate('post', 'favs')
+    // .exec(getCallback);
   }
 
   function putMethod({ body }, res) {
@@ -20,11 +20,12 @@ function userController(user) {
         name: body.user.name,
         email: body.user.email,
       };
+
       const putCallback = (createUserError, createdUser) => (
         createUserError ? res.send(createUserError) : res.json(createdUser));
-      user.create(newUser)
-        .populate('post', 'favs')
-        .exec(putCallback);
+      user.create(newUser, (putCallback));
+      // .populate('post', 'favs')
+      // .exec(putCallback);
     });
   }
   return { getMethod, putMethod };
