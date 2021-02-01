@@ -102,3 +102,8 @@
 }
 
 
+
+.log-btn-wrapper{
+    display: flex;
+    align-items: center;
+}

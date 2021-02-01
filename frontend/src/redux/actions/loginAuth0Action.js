@@ -3,7 +3,6 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 function loginAuth0Success(user) {
-  debugger;
   return {
     type: actionTypes.LOGIN_SUCCESS,
     user,
@@ -11,7 +10,6 @@ function loginAuth0Success(user) {
 }
 
 function loginAuth0Error(loginError) {
-  debugger;
   return {
     type: actionTypes.LOGIN_ERROR,
     loginError,
@@ -19,7 +17,6 @@ function loginAuth0Error(loginError) {
 }
 
 export default function sendUserToBack(user) {
-  debugger;
   return async (dispatch) => {
     try {
       const checkUser = await axios.put('http://localhost:1297/user/', { user });

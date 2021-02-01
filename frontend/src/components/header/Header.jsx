@@ -7,6 +7,8 @@
 import React, { useState } from 'react';
 import './Header.css';
 
+import Profile from './login/Profile';
+
 export default (props) => {
   const [homeSelected, setHomeSelected] = useState(false);
   const [likeSelected, setLikeSelected] = useState(false);
@@ -35,6 +37,9 @@ export default (props) => {
           >
             highlight_off
           </span>
+        </div>
+        <div className="log-btn-wrapper">
+          <Profile />
         </div>
         <div className="header-icons-wrapper">
           <span
