@@ -16,8 +16,7 @@
     font-size: 14px;
     color: rgb(38,38,38);
     font-weight: 600;
-    margin: 0px;
-    margin-left: 14px;
+    margin: 0px 0px 0px 14px !important;
     cursor: pointer
 }
 
@@ -48,8 +47,9 @@
 }
 
 .post-icon{
-    padding: 8px;
+    margin: 8px;
     font-size: 28px;
+    cursor: pointer;
 }
 
 .post-userProfile-description-wrapper, .hashtag-wrapper, .post-likes{
@@ -59,15 +59,25 @@
     padding: 0px 16px;
     margin-bottom: 8px;
 }
+
+.post-userProfile-description-wrapper{
+    margin-bottom: 2px;
+}
+
+.hashtag-wrapper{
+    margin: 0px 0px 0px 10px;
+}
+
 .post-comments-wrapper{
     padding: 0px 16px;
+    margin-bottom: 20px;
 }
 
 .likes-nmbr, .likes-txt{
     color: rgb(38,38,38);
     font-weight: 600;
     line-height: 18px;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Helvetica, sans-serif;
    
 }
@@ -77,11 +87,13 @@
 }
 
 .likes-txt, .post-description{
-    padding-left: 5px;
-    font-size: 15px;
+    padding-left: 4px;
+    font-size: 14px;
 }
 .post-hashtag{
-    padding: 0px 5px 8px 0px;   
+    padding: 0px 5px 8px 0px;  
+    color: #00376b; 
+    cursor: pointer;
 }
 
 .post-comments{
@@ -94,15 +106,22 @@
     flex-direction: row;
     align-items: center !important;
     height: 55px !important;
+    
 }
 
 .post-comment-input{
     width: 100%;
-    height: 80% !important;
-    margin: auto 0px !important;
-    border: 0px solid transparent !important;
-
+    height: 40% !important;
+    margin: 0px !important;
+    border: 0px !important;
+    background-color: transparent;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    resize: none !important;
+    padding: 16px !important;
 }
+
+
 
 .post-comment-input:focus{
     outline: none !important;
@@ -113,4 +132,28 @@
     border: 0px solid transparent !important;
     cursor: pointer;
     background-color: transparent;
+    font-weight: 500;
+    margin-right: 16px;
+    letter-spacing:0.2px;
+    
+}
+
+.post-comment-btn:disabled, .post-comment-btn[disabled]{
+    cursor:initial;
+    color: #0094f66b !important;
+}
+
+.post-author-comment{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-usr-commentd{
+    color: #262626;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+.post-author{
+    font-size: 14px !important;
 }
