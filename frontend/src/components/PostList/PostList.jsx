@@ -17,53 +17,61 @@ function PostList({ postList, dispatch }) {
     }
   });
   return (
-    <>
+    <div className="article-post-wrapper">
       {postList && postList.length
     && postList.map((post) => (
       <article
         key={post._id}
-        className="article-wrapper"
+        className="post-wrapper"
       >
-        <div className="post-user-wrapper">
+        <header className="post-user-wrapper">
           <div className="post-profile-pic-wrapper">
-            <img src="" alt="" />
+            <img className="post-profile-pic" src="https://the7.io/digital-agency/wp-content/uploads/sites/46/2018/02/gradient-slider.jpg" alt="" />
           </div>
           <div className="post-profile-user-wrapper">
-            <h4>Alexandre Frota</h4>
+            <h4 className="post-username">Alexandre Frota</h4>
           </div>
-        </div>
+        </header>
         <div className="post-img-wrapper">
-          <img src={`${post.image}`} alt="" />
+          <img className="post-img" src={`${post.image}`} alt="" />
         </div>
         <div className="post-icons-wrapper">
-          <span className="material-icons-outlined">
+          <span className="material-icons-outlined post-icon">
             favorite
           </span>
-          <span className="material-icons-outlined">
+          <span className="material-icons-outlined post-icon">
             add_comment
           </span>
         </div>
-        <div className="post-userProfile-description-hashtag-wrapper">
+        <div className="post-likes">
+          <span className="likes-nmbr">12</span>
+          <p className="likes-txt">likes</p>
+        </div>
+        <div className="post-userProfile-description-wrapper">
+
           <h4>Alexandre Frota</h4>
           <p className="post-description">{post.description}</p>
+        </div>
+        <div className="hashtag-wrapper">
           {post.hashtags && post.hashtags.map((hashtag) => <p className="post-hashtag">{hashtag}</p>)}
         </div>
         <div className="post-comments-wrapper">
           {post.comments && post.comments.map((comment) => <p className="post-comments">{comment}</p>)}
         </div>
-        <div className="post-comment-input-wrapper">
-          <input type="text" className="post-comment-input" />
+        <div className="post-comment-input-btn-wrapper">
+          <input type="text" className="post-comment-input" placeholder="Add your comment..." />
+          <button
+            type="button"
+            className="post-comment-btn"
+            disabled
+          >
+            Publish
+          </button>
         </div>
-        <button
-          type="button"
-          className="post-comment-btn"
-        >
-          Publish
-        </button>
       </article>
     ))}
 
-    </>
+    </div>
   );
 }
 
