@@ -1,8 +1,8 @@
-.article-post-wrapper{
+.articles-post-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    background-color: rgb(250,250,250);
 }
 
 .post-wrapper{
@@ -156,4 +156,8 @@
 
 .post-author{
     font-size: 14px !important;
+}
+
+.post-comment-section, .post-header-photo-section{
+    background-color: white;
 }
