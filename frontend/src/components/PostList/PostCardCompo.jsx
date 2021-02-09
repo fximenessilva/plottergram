@@ -1,12 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './PostList.css';
 import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import PostDetail from '../PostDetail/PostDetail';
+import PostDetailClose from '../PostDetail/PostDetailClose';
+import PostDetailContent from '../PostDetail/PostDetailContent';
 
 function PostCardCompo({ post }) {
   const [commentInput, setCommentInput] = useState('');
@@ -87,10 +86,8 @@ function PostCardCompo({ post }) {
       </section>
 
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <PostDetail id="customized-dialog-title" onClose={handleClose}>
-          {post.likes}
-        </PostDetail>
-        {post.likes}
+        <PostDetailContent postDetail={post} />
+        <PostDetailClose id="customized-dialog-title" onClose={handleClose} />
       </Dialog>
     </>
   );

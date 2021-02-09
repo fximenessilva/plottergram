@@ -6,12 +6,12 @@ import React from 'react';
 import './PostDetail.css';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 
-function PostDetail(props) {
+function PostDetailClose(props) {
   const { onClose } = props;
   return (
     <>
       <MuiDialogTitle disableTypography>
-        asasasa
+
         {onClose ? (
           <span
             role="button"
@@ -28,4 +28,4 @@ function PostDetail(props) {
   );
 }
 
-export default PostDetail;
+export default PostDetailClose;
